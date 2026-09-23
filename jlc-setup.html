@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>嘉立创油猴 · 安装指引</title>
+  <style>
+    body { font-family: system-ui, Segoe UI, sans-serif; max-width: 720px; margin: 32px auto; padding: 0 16px; color: #0f172a; line-height: 1.55; }
+    h1 { font-size: 22px; }
+    .box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin: 16px 0; }
+    .warn { background: #fff7ed; border-color: #fdba74; }
+    a.btn { display: inline-block; margin: 6px 8px 6px 0; padding: 10px 14px; background: #0284c7; color: #fff; text-decoration: none; border-radius: 8px; }
+    a.btn.sec { background: #334155; }
+    a.btn.ok { background: #047857; }
+    ol { padding-left: 22px; }
+    code { background: #e2e8f0; padding: 1px 6px; border-radius: 4px; }
+    .ok { color: #047857; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>嘉立创校对 · 油猴安装</h1>
+  <div class="box warn">
+    <b>必须更新到 ≥1.16.20</b>：磁盘更新 <b>不等于</b> Tampermonkey 已加载。<br />
+    <b>关键</b>：只开 mh 首页「已登录」不够。必须打开
+    <code>nw.jlcerp.com/smtbaseservice</code> 贴片机机器库页，浏览器才会下发
+    <code>SMT_ERP_SESSION_ID</code>；否则 ERP 一直显示会话失效(460)。<br />
+    已在机器库页仍 460 → 退出再登录，勿反复新开标签。<br />
+    打开 nw 被跳到 mh 属正常；不要开库位 materialLocation（私有库提货仅 API 查库位）。同站点勿 Chrome+Edge 双开。
+  </div>
+  <div class="box">
+    <ol>
+      <li>点「安装/更新」→ Tampermonkey 确认。</li>
+      <li>点「打开机器库页」；FAB 显示 <span class="ok">JLC桥 v1.16.20</span> 且在线。</li>
+      <li>回 ERP「嘉立创校对」应显示油猴在线，可连扫下载；面板有「查客编库存 / 填提货申请」。</li>
+    </ol>
+    <a class="btn" href="./jlc-proofread-query.user.js">安装/更新嘉立创油猴</a>
+    <a class="btn ok" href="https://nw.jlcerp.com/smtbaseservice/#/common/index" target="_blank" rel="noopener">打开机器库页</a>
+    <a class="btn sec" href="https://mh.jlcerp.com/#/" target="_blank" rel="noopener">打开 mh（登录）</a>
+    <a class="btn sec" href="http://127.0.0.1:8787/" target="_blank" rel="noopener">打开 ERP</a>
+  </div>
+</body>
+</html>

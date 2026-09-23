@@ -1,0 +1,8 @@
+*.bak*
+*.bak_*
+.DS_Store
+Thumbs.db
+*.log
+.env
+*.cookie*
+jlc_cookie.txt
